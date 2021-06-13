@@ -99,7 +99,8 @@
 
                     <label for="zip_code">Zip Code</label>
                     <input type="text" id="zip_code" name="user_zip_code">
-                    <hr>
+                    
+                    <hr id="hidden_hr">
 
                 </fieldset>
 
@@ -120,13 +121,13 @@
 
                     <label>Newsletter format</label>
 
-                    <label for="html_format">HTML</label>
                     <input type="radio" id="html_format" value="html_format" name="user_format_selection">
-                    <label for="plain_text_format"><span>Plain text</span></label><br>
+                    <label for="html_format">HTML</label><br>
                     <input type="radio" id="plain_text_format" value="plain_text_format" name="user_format_selection">
+                    <label for="plain_text_format"><span>Plain text</span></label><br>
                     <label for="requested_topics"><span>Other topics you'd like to hear about</span></label>
                     <textarea id="requested_topics" name="user_requested_topics"></textarea>
-
+                    
                 </fieldset>
 
                 <button type="submit">Sign Up</button>
@@ -138,7 +139,6 @@
         
 
         <footer>
-            <hr>
             <p>Copyright The Code Review</p>
         </footer>
     </div>

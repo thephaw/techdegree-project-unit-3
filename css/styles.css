@@ -2,8 +2,15 @@
     box-sizing: border-box;
 }
 
+header {
+    margin: 0;
+    background: #2d3945;
+    color: white;
+}
+
 body {
     font-family: 'Tinos', serif;
+    color: #2d3945;
     width: 100%;
 }
 
@@ -13,11 +20,51 @@ body {
     margin: auto;
 }
 
-header,
 main,
 footer {
-    width: 95%;
+    width: 90%;
     margin: auto;
+}
+
+h1,
+legend {
+    font-size: 1.5em;
+}
+
+h1 {
+    margin: 0;
+    padding: 24px 0;
+    text-transform: uppercase;
+}
+
+
+legend {
+    border-top: 2px solid black;
+    width: 100%;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+h1,
+h2,
+legend {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.2em;
+    color: #b7bcbf;
+}
+
+hr {
+    margin: 30px auto 2px;
+    border-bottom: 3px solid black;
+}
+
+#hidden_hr {
+    border: 1px solid white;
 }
 
 h1,
@@ -28,11 +75,13 @@ p {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin: 10px auto;
 }
 
 fieldset {
     border: none;
+    margin: 0;
+    padding: 0;
 }
 
 input[type="text"],
@@ -41,15 +90,19 @@ input[type="email"],
 select,
 textarea {
     display: block;
-    background: lightgrey;
+    background: #eff0f1;
     width: 100%;
     border: none;
+    border-radius: 4px;
     font-size: 16px;
     margin: 0;
     outline: none;
-    padding: 10px;
+    padding: 15px;
     height: auto;
+}
 
+textarea {
+    height: 100px;
 }
 
 input[type="checkbox"] + label {
@@ -57,5 +110,23 @@ input[type="checkbox"] + label {
 }
 
 input[type="radio"] + label {
-    display: inline;
+    display: inline-block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    display: block;
+    background: #4ebbb5;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 15px 0;
 }
