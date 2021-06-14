@@ -20,8 +20,16 @@ footer {
 
 .container {
     width: 100%;
+    background: lightsteelblue;
     margin: auto;
+    padding-bottom: 15px;
 }
+
+.footer_wrapper {
+    background: #2d3945;
+}
+
+
 
 main,
 footer {
@@ -35,6 +43,10 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    margin: 0;
+    padding: 15px;
+}
 
 legend {
     border-top: 2px solid black;
@@ -58,9 +70,14 @@ legend {
 p {
     font-weight: 400;
     line-height: 1.2em;
-    color: #b7bcbf;
+    color: slategray;
+    margin: 0;
+    padding: 10px;
 }
 
+footer p {
+    color:lightgray;
+}
 
 ::placeholder {
     font-size: .9em;
@@ -97,7 +114,7 @@ hr {
 }
 
 #hidden_hr {
-    border: 1px solid white;
+    border: none;
 }
 
 h1,
@@ -218,7 +235,7 @@ button {
 
     h2 {
         font-size: 1.5em;
-        margin-top: 50px;
+        padding-top: 30px;
         margin-bottom: 0;
     }
 
