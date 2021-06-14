@@ -170,6 +170,8 @@ select:focus,
 textarea:focus,
 button:focus {
     border: 3px solid #46698b;
+    background-color: turquoise;
+    transition: background-color 1000ms linear;
 }
 
 input:focus[type="text"],
@@ -183,43 +185,6 @@ select:focus {
     margin-top: 20px;
 }
 
-/* Checkbox Styling */
-
-.checkbox {
-    appearance: none;
-    background-color: white;
-    border: 1px solid #b7bcbf;
-    border-radius: 2px;
-}
-
-.checkbox:checked,
-.radio:checked {
-    background-color: #4099f7;
-    color: white;
-}
-
-.checkbox:checked:after {
-    content: '\2714';
-    font-size: 7px;
-    position: absolute;
-    padding: 1px;
-}
-
-/* Radio Styling */
-
-.radio {
-    appearance: none;
-    background-color: white;
-    border: 1px solid #b7bcbf;
-    border-radius: 50%;
-}
-
-.radio:checked:after {
-    content: '\00B7';
-    position: absolute;
-    line-height: 10px;
-    font-size: 25px;
-}
 
 button {
     display: block;
