@@ -10,13 +10,16 @@ header {
 
 body {
     font-family: 'Tinos', serif;
-    color: #2d3945;
+    color: #495d70;
     width: 100%;
+}
+
+footer {
+    padding-bottom: 200px
 }
 
 .container {
     width: 100%;
-    max-width: 384px;
     margin: auto;
 }
 
@@ -24,11 +27,6 @@ main,
 footer {
     width: 90%;
     margin: auto;
-}
-
-h1,
-legend {
-    font-size: 1.5em;
 }
 
 h1 {
@@ -42,20 +40,55 @@ legend {
     border-top: 2px solid black;
     width: 100%;
     padding-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 h1,
 h2,
 legend {
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.2em;
+}
+
+h2,
+legend {
+    color:#2d3945;
 }
 
 p {
     font-weight: 400;
     line-height: 1.2em;
     color: #b7bcbf;
+}
+
+
+::placeholder {
+    font-size: .9em;
+    font-weight: 400;
+    font-style: italic;
+    text-align: right;
+    color: #adb2b7;
+}
+
+input[id="phone"]::placeholder,
+input[id="address"]::placeholder,
+input[id="city"]::placeholder,
+input[id="zip_code"]::placeholder,
+textarea::placeholder {
+    text-align: left;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+option {
+    color: black;
+}
+
+select:required:invalid {
+    color: #adb2b7;
 }
 
 hr {
@@ -73,9 +106,11 @@ p {
     text-align: center;
 }
 
+
 label {
     display: block;
-    margin: 10px auto;
+    margin: 15px 0 8px;
+    font-size: 1em;
 }
 
 fieldset {
@@ -101,21 +136,89 @@ textarea {
     height: auto;
 }
 
+
+
+#zip_code {
+    width: 50%;
+}
+
 textarea {
     height: 100px;
 }
 
-input[type="checkbox"] + label {
-    display: inline-block;
+label[for*="news"],
+label[for*="format"] {
+    margin: 5px;
 }
 
+input[type="checkbox"] + label,
 input[type="radio"] + label {
     display: inline-block;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    margin-right: 10px;
+    margin: 0 5px 0 3px;
+    width: 11px;
+    height: 11px;
+}
+
+input:focus[type="text"],
+input:focus[type="tel"],
+input:focus[type="email"],
+select:focus,
+textarea:focus,
+button:focus {
+    border: 3px solid #46698b;
+}
+
+input:focus[type="text"],
+input:focus[type="tel"],
+input:focus[type="email"],
+select:focus {
+    margin: -3px;
+}
+
+.selection_header {
+    margin-top: 20px;
+}
+
+/* Checkbox Styling */
+
+.checkbox {
+    appearance: none;
+    background-color: white;
+    border: 1px solid #b7bcbf;
+    border-radius: 2px;
+}
+
+.checkbox:checked,
+.radio:checked {
+    background-color: #4099f7;
+    color: white;
+}
+
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 7px;
+    position: absolute;
+    padding: 1px;
+}
+
+/* Radio Styling */
+
+.radio {
+    appearance: none;
+    background-color: white;
+    border: 1px solid #b7bcbf;
+    border-radius: 50%;
+}
+
+.radio:checked:after {
+    content: '\00B7';
+    position: absolute;
+    line-height: 10px;
+    font-size: 25px;
 }
 
 button {
@@ -129,4 +232,61 @@ button {
     border-radius: 4px;
     margin: 20px auto;
     padding: 15px 0;
+}
+
+#copyright {
+    font-size: .95em;
+    font-style: italic;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    main,
+    footer {
+        max-width: 500px;
+    }
+
+    main p {
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+    width: 70%;
+    }
+
+    .contact_information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .zip {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+
+    .zip-code {
+        width: 10px;
+    }
+
+    .zip label {
+        margin-right: 90px;
+    }
+
+    #zip_code {
+        max-width: 17.5%;
+    }
+
 }
